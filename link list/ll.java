@@ -259,7 +259,7 @@ public class ll {
     }
 
     public static void main(String[] args) {
-    //     ll linklist = new ll();
+         ll linklist = new ll();
     //     linklist.addFirst(3);
     //     linklist.addFirst(2);
     //     linklist.addLast(1);
@@ -281,11 +281,14 @@ public class ll {
     //    System.out.println(linklist.checkPalindrome());
     //     System.out.println(linklist.isCycle());
         head = new Innerll(1);
-        head.next = new Innerll(2);
+        Innerll temp = new Innerll(4);
+        head.next = temp;
         head.next.next = new Innerll(3);
-        head.next.next.next = head;
+        head.next.next.next = temp;
         System.out.println(isCycle());
+        linklist.printList();
         removeCycle();
+        linklist.printList();
         System.out.println(isCycle());
         
     }
